@@ -18,7 +18,7 @@ class BinarySearch(object):
 
     """Search method to find if the value is in the list"""
 
-    def search(self, value):
+    def search_u(self, value):
         self.value = value
         first = 0
         last = len(self.alist) - 1
@@ -51,9 +51,9 @@ class BinarySearch(object):
             return {'count': 0, 'index': -1}
 
     """Try searching recursively """
-    def search_r(self, element, first=0, last=None, count=0):
+    def search(self, element, first=0, last=None, count=0):
 
-        if not first:
+        if last is None:
             last = self.length - 1
         if element == self[first]:
             return {'index': first, 'count': count}
@@ -80,9 +80,3 @@ class BinarySearch(object):
     print(csearch.search(10000))
 
 """
-
-
-
-
-
-
